@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { SingleSpecies, EvolutionChain, Chain } from "@interfaces";
+import { SingleSpecies, EvolutionChain, Chain } from "interfaces";
 import axios from 'axios'
 import { Stack } from '@mui/material'
 import EvolutionCircle from '@components/Detail/EvolutionCircle';

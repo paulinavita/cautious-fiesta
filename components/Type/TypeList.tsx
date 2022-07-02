@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {TypeDetail } from "@interfaces"
+import { TypeDetail } from "interfaces"
 import { Table, TableBody, TableContainer, TableRow, Paper } from '@mui/material'
 import PokeCellCard from '@components/Type/PokeCellCard';
 import Link from 'next/link'

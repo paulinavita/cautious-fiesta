@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sprites } from '@interfaces'
+import { Sprites } from 'interfaces'
 import Image from 'next/image'
 import { Typography, Box } from '@mui/material'
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { TypeDetail } from "@interfaces"
+import { TypeDetail } from "interfaces"
 import { Typography, Box } from '@mui/material'
 import getCapFirstLetter from '@utils/getCapitalFirstLetter'
 import Link from 'next/link'

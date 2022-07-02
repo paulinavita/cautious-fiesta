@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import getLeadingZeros from '@utils/getLeadingZeros'
 import getCapFirstLetter from '@utils/getCapitalFirstLetter'
-import { Ability } from '@interfaces'
+import { Ability } from 'interfaces'
 import DetailModal from '@components/Home/DetailModal'
 import ChipType from '@components/Common/Chip'
 

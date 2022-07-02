@@ -6,7 +6,7 @@ import StatList from '@components/Detail/StatList';
 import { Box, Typography, Container } from '@mui/material'
 import useFetch from '@hooks/useFetch';
 import TopCard from '@components/Detail/TopCard';
-import { PokemonInfo, EvolutionDetail } from '@interfaces';
+import { PokemonInfo, EvolutionDetail } from 'interfaces';
 import EvolutionList from "@components/Detail/EvolutionList";
 
 export type EvoChain = {

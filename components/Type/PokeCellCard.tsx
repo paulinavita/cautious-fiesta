@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { TypeDetail } from "@interfaces"
+import { TypeDetail } from "interfaces"
 import { ChipType } from '@components/Common'
 import { TableCell, Typography, Box } from '@mui/material'
 import getLeadingZeros from '@utils/getLeadingZeros'

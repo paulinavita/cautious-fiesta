@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
-import { Stat } from '@interfaces'
-import StatComp from '@components/detail/Stat'
+import { Stat } from 'interfaces'
+import StatComp from '@components/Detail/Stat'
 
 interface Props {
   stats: Stat[],

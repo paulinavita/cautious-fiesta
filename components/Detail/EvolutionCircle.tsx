@@ -1,6 +1,6 @@
 import React from 'react'
 import { CircularProgress, Typography, Box } from '@mui/material';
-import { SingleSpecies } from '@interfaces'
+import { SingleSpecies } from 'interfaces'
 import getCapFirstLetter from '@utils/getCapitalFirstLetter'
 import Image from 'next/image'
 

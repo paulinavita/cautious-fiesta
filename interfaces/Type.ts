@@ -1,6 +1,4 @@
-import { PokemonInfo } from "./PokemonInfo";
-
-interface TypeDetail {
+export interface TypeDetail {
   name: string;
   url: string;
 }

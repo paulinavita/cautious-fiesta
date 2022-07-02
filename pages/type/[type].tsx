@@ -5,7 +5,7 @@ import { Grid, Box, Container, TablePagination } from '@mui/material'
 import useFetch from '@hooks/useFetch';
 import getTypeColor from '@utils/getTypeColor'
 import { Doughnut, Layout, Loader } from '@components/Common';
-import { TypeDetail, PokemonInfo } from "@interfaces";
+import { TypeDetail, PokemonInfo } from "interfaces";
 import TypeList from '@components/Type/TypeList';
 import Sidebar from '@components/Type/Sidebar';
 import { css } from '@emotion/react'

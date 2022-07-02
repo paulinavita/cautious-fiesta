@@ -9,7 +9,7 @@ import axios from 'axios'
 // import { getPokemons, useFetchPokemons, getPokemon } from '../../api/index';
 import useFetch from '@hooks/useFetch';
 import { CardModalProps } from '@components/Home/Card'
-import { Pokemon, Type, PokemonInfo } from '@interfaces';
+import { Pokemon, Type, PokemonInfo } from 'interfaces';
 
 // interface NewPokemonsList extends Pokemon {
 //   id: number,

@@ -1,6 +1,6 @@
 import React from 'react'
 import { CircularProgress, CircularProgressProps, Typography, Stack, Box } from '@mui/material';
-import { Stat } from '@interfaces'
+import { Stat } from 'interfaces'
 
 interface Props {
   stat: Stat,
