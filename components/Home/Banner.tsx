@@ -5,14 +5,9 @@ import { Typography, Grid, Box } from '@mui/material'
 import Image from 'next/image'
 // import LocalizationContext from '../context/i18nContext';
 
-interface Props {
-  [x: string]: any;
-}
-
-const Banner = ({ ...rest }: Props): JSX.Element => {
+const Banner = (): JSX.Element => {
   const { t } = useTranslation()
-  useEffect(() => {
-  }, [])
+
   return (
     <Container sx={{ height: '100vh'}}>
       <Grid

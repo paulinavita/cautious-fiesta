@@ -68,7 +68,7 @@ const TypeHome: FC = () => {
         <Doughnut color={currentColor} css={donatRight} border={'16vh'}/>
         <Grid pt={3} container justifyContent="flex-start" spacing={3}>
           <Grid item xs={2}>
-            <Sidebar types={typeList?.results} />
+            <Sidebar results={typeList?.results} />
           </Grid>
           <Grid item xs={10}>
             {

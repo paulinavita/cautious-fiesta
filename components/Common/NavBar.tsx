@@ -71,7 +71,7 @@ const NavBar = ({
         </Box>
         
         <Box alignItems={'center'}>
-          <Button
+          {/* <Button
             onClick={() => onSidebarOpen()}
             aria-label="Menu"
             variant={'outlined'}
@@ -84,7 +84,7 @@ const NavBar = ({
             }}
           >
             <MenuIcon />
-          </Button>
+          </Button> */}
           <LanguageSwitcher />
 
         </Box>
