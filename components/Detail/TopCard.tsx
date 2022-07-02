@@ -5,9 +5,10 @@ import { CardModalProps } from '@components/Home/Card'
 import getCapFirstLetter from '@utils/getCapitalFirstLetter'
 import ChipType from '@components/Common/Chip'
 import Image from 'next/image'
+import { PokemonInfo } from 'interfaces';
 
 interface Props {
-  pokemon: CardModalProps,
+  pokemon: PokemonInfo,
 }
 
 

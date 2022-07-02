@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { TypeDetail } from "interfaces"
+import { TypeDetail, PokemonInfo } from "interfaces"
 import { ChipType } from '@components/Common'
 import { TableCell, Typography, Box } from '@mui/material'
 import getLeadingZeros from '@utils/getLeadingZeros'
@@ -7,13 +7,12 @@ import getCapFirstLetter from '@utils/getCapitalFirstLetter'
 import useFetch from '@hooks/useFetch';
 import Image from 'next/image'
 import Link from 'next/link'
-
 interface Props {
-  pokemon: TypeDetail[]
+  pokemon: any
 }
 
 const PokeCellCard = ({ pokemon }: Props): JSX.Element => {
-  const { data } = useFetch<TypeDetail>(`/pokemon/${getId(pokemon.url)}`)
+  const { data } = useFetch<PokemonInfo>(`/pokemon/${getId(pokemon.url)}`)
 
   function getId (uri: string) {
 		let uriArray = uri.split('/')
@@ -24,7 +23,7 @@ const PokeCellCard = ({ pokemon }: Props): JSX.Element => {
   const getNumId = () => {
     return data?.id && (
       <Typography variant="h6" sx={{fontWeight: 500}}>
-        #{getLeadingZeros(data.id)}
+        #{getLeadingZeros(String(data.id))}
       </Typography>
     )
   }

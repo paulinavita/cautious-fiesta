@@ -4,7 +4,6 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import LocalizationContext from '../../context/i18nContext';
 
 const LanguageSwitcher: FC = () => {
   const { t, i18n } = useTranslation()

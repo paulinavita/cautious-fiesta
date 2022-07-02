@@ -3,8 +3,8 @@ import { useState } from 'react';
 import type { AppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
-import ModalProvider from '../context/modalContext';
-import LocalizationProvider from '../context/i18nContext';
+// import ModalProvider from '../context/modalContext';
+// import LocalizationProvider from '../context/i18nContext';
 import '../lib/i18n';
 
 // import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
@@ -29,12 +29,12 @@ const App: React.FunctionComponent<PropsPage> = (props) => {
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={getTheme()}>
-        <LocalizationProvider>
+        {/* <LocalizationProvider> */}
           {/* <ModalProvider> */}
             <CssBaseline />
             <Component {...pageProps} />
           {/* </ModalProvider> */}
-        </LocalizationProvider>
+        {/* </LocalizationProvider> */}
       </ThemeProvider>
     </CacheProvider>
   )

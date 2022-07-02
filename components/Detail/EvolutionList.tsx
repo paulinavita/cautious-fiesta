@@ -12,7 +12,7 @@ interface Props {
   name: string
 }
 
-const EvolutionList = ({ name }: Props): JSX.Element => {
+const EvolutionList = ({ name = '' }: Props): JSX.Element => {
   const [evolutionInfo, setEvolutionInfo] = useState<SingleSpecies[]>([])
 
   const getEvolutionChain = async () => {

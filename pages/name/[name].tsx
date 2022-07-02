@@ -22,7 +22,7 @@ const PokemonDetail: FC = () => {
     if (!isReady) return
   }, [isReady])
 
-  if (!data && error) {
+  if (!data || error) {
     return (
       <Box>
         <Typography>Error while searching for pokemon</Typography>
@@ -38,31 +38,29 @@ const PokemonDetail: FC = () => {
     )
   }
 
-  if (data?.name) {
-    return (
-      <React.Fragment>
-        <Layout>
-          <Container fixed>
-              <Box display={'flex'} flexDirection={'column'} alignContent={'center'} justifyContent={'center'}>
-                {/* Main */}
-                <TopCard pokemon={data} />
+  return (
+    <React.Fragment>
+      <Layout>
+        <Container fixed>
+            <Box display={'flex'} flexDirection={'column'} alignContent={'center'} justifyContent={'center'}>
+              {/* Main */}
+              <TopCard pokemon={data} />
 
-                {/* Sprites */}
-                <Typography>Other Images</Typography>
-                <ImgSprites sprites={data.sprites}/>
+              {/* Sprites */}
+              <Typography>Other Images</Typography>
+              <ImgSprites sprites={data.sprites}/>
 
-                {/* Stats */}
-                <Typography>Stats</Typography>
-                <StatList stats={data.stats}/>
-      
-                {/* Evolutions */}
-                <Typography>Evolution:</Typography>
-                <EvolutionList name={query.name}/>
-              </Box>
-          </Container>
-        </Layout>
-      </React.Fragment>
-    )
-  }
+              {/* Stats */}
+              <Typography>Stats</Typography>
+              <StatList stats={data.stats}/>
+    
+              {/* Evolutions */}
+              <Typography>Evolution:</Typography>
+              <EvolutionList name={String(query.name) || ''}/>
+            </Box>
+        </Container>
+      </Layout>
+    </React.Fragment>
+  )
 }
 export default PokemonDetail

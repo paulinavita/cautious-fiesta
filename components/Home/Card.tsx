@@ -9,14 +9,6 @@ import { Ability } from 'interfaces'
 import DetailModal from '@components/Home/DetailModal'
 import ChipType from '@components/Common/Chip'
 
-// interface Props {
-//   image: string
-//   name: string
-//   nickname?: string
-//   types: Array<TypeItem>
-//   count?: number
-// }
-
 export type CardModalProps = {
   id: number
   name: string

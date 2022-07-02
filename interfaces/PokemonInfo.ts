@@ -1,3 +1,4 @@
+import { EvolutionChain } from "./Evolution";
 
 export interface PokemonInfo {
   abilities: Ability[];
@@ -38,6 +39,7 @@ export interface SingleSpecies {
   url: string;
   name: string;
   id: number;
+  evolution_chain: EvolutionChain
 }
 
 export interface GameIndex {

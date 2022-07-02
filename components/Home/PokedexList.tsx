@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import { Card } from '@components/Home';
-import { Container } from '@components/Common';
+import { Container, Loader } from '@components/Common';
 import Pagination from '@mui/material/Pagination';
 import { Grid, Box, Typography } from '@mui/material'
 import { GetStaticProps } from 'next';
@@ -57,14 +57,14 @@ const PokedexList: FC = () => {
     Promise.allSettled(promises).then(resolves)
   }, [data])
 
-  const handleChangePagination = (_, value: number) => {
+  const handleChangePagination = (_: any, value: number) => {
     const offset = (value - 1) * 9
     setPokemons([])
     setPage(value)
     setOffset(offset)
   }
 
-  if (!data) return '<div>empty</div>'
+  if (!data) return (<Loader></Loader>)
 
   return (
     <Container maxWidth="false" bgcolor="primary.background">

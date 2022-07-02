@@ -16,4 +16,5 @@ export interface Chain {
 
 export interface EvolutionChain {
   chain: Chain;
+  url: string;
 }

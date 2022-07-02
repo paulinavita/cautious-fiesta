@@ -1,13 +1,14 @@
+// @ts-nocheck
 /** @jsxImportSource @emotion/react */
-import React, { useEffect, useState, FC } from 'react'
-import Router, { useRouter } from "next/router";
+import React, { useState, useEffect } from 'react'
+import Router, { useRouter } from "next/router"
 import { Grid, Box, Container, TablePagination } from '@mui/material'
-import useFetch from '@hooks/useFetch';
+import useFetch from '@hooks/useFetch'
 import getTypeColor from '@utils/getTypeColor'
-import { Doughnut, Layout, Loader } from '@components/Common';
-import { TypeDetail, PokemonInfo } from "interfaces";
-import TypeList from '@components/Type/TypeList';
-import Sidebar from '@components/Type/Sidebar';
+import { Doughnut, Layout, Loader } from '@components/Common'
+import { TypeDetail, PokemonInfo } from "interfaces"
+import TypeList from '@components/Type/TypeList'
+import Sidebar from '@components/Type/Sidebar'
 import { css } from '@emotion/react'
 
 const donatLeft = css({
@@ -30,18 +31,20 @@ const donatRight = css({
   width: '55vh',
 })
 
+export type SidebarProps = {
+  results: TypeDetail[]
+}
+
 const TypeHome: FC = () => {
   const { query, isReady } = useRouter()
-  const [typeInfo, setTypeInfo] = useState<PokemonInfo[]>([])
-  const [typeListInfo, setTypeListInfo] = useState<TypeDetail[]>([])
   const [currentType, setCurrentType] = useState('')
   const [currentColor, setCurrentColor] = useState('')
-  const { data: typeList } =  useFetch<TypeDetail>(`/type`)
+  const { data: typeList } =  useFetch<SidebarProps>(`/type`)
   const { data, error, loading: currentTypePokemonLoading } = useFetch<TypeDetail>(`/type/${currentType}`);
 
   const handleCurrentType = () => {
     if (query.type !== '') {
-      setCurrentType(query.type)
+      setCurrentType((String(query.type)))
     } else {
       setCurrentType('normal')
     }

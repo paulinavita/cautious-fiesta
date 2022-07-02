@@ -10,7 +10,7 @@ interface Props {
 
 const EvolutionCircle = ({ species }: Props): JSX.Element => {
 
-  const getId = (uri) => {
+  const getId = (uri: string) => {
 		let uriArray = uri.split('/')
 		const number = Number(uriArray[uriArray.length - 2])
 		return number
