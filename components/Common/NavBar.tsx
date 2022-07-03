@@ -70,22 +70,7 @@ const NavBar = ({
         </Box>
         
         <Box alignItems={'center'}>
-          {/* <Button
-            onClick={() => onSidebarOpen()}
-            aria-label="Menu"
-            variant={'outlined'}
-            sx={{
-              display: { xs: 'flex', md: 'none' },
-              borderRadius: 2,
-              minWidth: 'auto',
-              padding: 1,
-              borderColor: alpha(theme.palette.divider, 0.2),
-            }}
-          >
-            <MenuIcon />
-          </Button> */}
           <LanguageSwitcher />
-
         </Box>
       </Box>
     </React.Fragment>

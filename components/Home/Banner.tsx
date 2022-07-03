@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Container, ButtonBase } from '@components/Common'
 import { Typography, Grid, Box } from '@mui/material'
 import Image from 'next/image'
-// import LocalizationContext from '../context/i18nContext';
 
 const Banner = (): JSX.Element => {
   const { t } = useTranslation()

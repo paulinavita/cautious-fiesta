@@ -15,11 +15,6 @@ interface Props {
 const TopCard = ({ pokemon }: Props): JSX.Element => {
   return (
     <Box sx={{}}>
-      {/* Delete this one use if*/}
-      {/* <Box display={'flex'} justifyContent={'flex-end'}>
-        <CloseIcon onClick={handleClose}></CloseIcon>
-      </Box> */}
-      {/* Main Box */}
       <Box>
         <Box display={'flex'}>
           {/* Left */}
@@ -59,19 +54,6 @@ const TopCard = ({ pokemon }: Props): JSX.Element => {
                   }
               </Box>
               </Box>
-              {/* Detail remove this use checker */}
-              {/* <Box mt={3}>
-                <ButtonBase
-                  sx={{
-                    borderRadius: 2,
-                    my: 1,
-                    py: 1,
-                    px: 2,
-                    boxShadow: 0,
-                  }}
-                  text="View Detail"
-                />
-              </Box> */}
             </Box>
           </Box>
         </Box>
