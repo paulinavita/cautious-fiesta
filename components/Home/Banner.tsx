@@ -4,9 +4,15 @@ import { Container, ButtonBase } from '@components/Common'
 import { Typography, Grid, Box } from '@mui/material'
 import Image from 'next/image'
 
+
 const Banner = (): JSX.Element => {
   const { t } = useTranslation()
 
+  const onClickScroll = (e: any) => {
+    e.preventDefault();
+    const pokeList = document.getElementById("pokedex-list")
+    pokeList && pokeList.scrollIntoView({ behavior: "smooth" })
+  }
   return (
     <Container sx={{ height: '100vh'}}>
       <Grid
@@ -27,7 +33,7 @@ const Banner = (): JSX.Element => {
           <Typography mx={6} my={2}>
             {t('home.banner.desc')}
           </Typography>
-          <Box mx={6}>
+          <Box onClick={onClickScroll} mx={6}>
             <ButtonBase text="Check PokeDex"/>
           </Box>
         </Grid>

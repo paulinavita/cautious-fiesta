@@ -58,7 +58,7 @@ const PokedexList: FC = () => {
 
   return (
     <Container maxWidth="false" bgcolor="primary.background">
-      <Container>
+      <Container id="pokedex-list">
         <Box px={{xs:4, sm:8, md:12}}>
         <Box sx={{ pb: 7, pt: 3 }} display={'flex'} flexDirection={'column'} textAlign={'center'}>
           <Typography variant="h4" sx={{ pb: 2, 'fontWeight': 700 }}>PokeDex</Typography>
