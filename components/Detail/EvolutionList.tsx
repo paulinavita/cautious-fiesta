@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { SingleSpecies, EvolutionChain, Chain } from "interfaces";
 import axios from 'axios'
-import { Stack } from '@mui/material'
+import { Stack, Box } from '@mui/material'
 import EvolutionCircle from '@components/Detail/EvolutionCircle';
 import Link from 'next/link'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-
-// import useFetch from '@hooks/useFetch';
-
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 interface Props {
   name: string
 }
@@ -46,7 +43,12 @@ const EvolutionList = ({ name = '' }: Props): JSX.Element => {
       {
         evolutionInfo?.map((ev, i) => (
           <Link key={i} href={`/name/${ev.name}`}>
-            <a><EvolutionCircle species={ev} /></a>
+            <Box display={'flex'}>
+              <a>
+                <EvolutionCircle species={ev} index={i} />
+                {/* { (i + 1 !== evolutionInfo.length) && <ArrowForwardIcon /> } */}
+              </a>
+            </Box>
           </Link>
         ))
       }

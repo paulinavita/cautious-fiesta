@@ -2,13 +2,14 @@ import React from 'react'
 import { CircularProgress, Typography, Box } from '@mui/material';
 import { SingleSpecies } from 'interfaces'
 import getCapFirstLetter from '@utils/getCapitalFirstLetter'
+import getStatsColor from '@utils/getStatsColor'
 import Image from 'next/image'
-
 interface Props {
   species: SingleSpecies,
+  index: number,
 }
 
-const EvolutionCircle = ({ species }: Props): JSX.Element => {
+const EvolutionCircle = ({ species, index }: Props): JSX.Element => {
 
   const getId = (uri: string) => {
 		let uriArray = uri.split('/')
@@ -16,13 +17,18 @@ const EvolutionCircle = ({ species }: Props): JSX.Element => {
 		return number
 	}
 
+  const getColor = (i: number) => {
+    return getStatsColor[i]
+  }
+
   return (
     <Box display={'flex'} flexDirection={'column'} position="relative">
       <CircularProgress
         thickness={2} 
-        size='15vh'
+        size='20vh'
         variant="determinate"
         value={100} 
+        style={{'color': getColor(index)}}
       />
       <Box
         sx={{

@@ -1,19 +1,22 @@
 import React from 'react'
-import { CircularProgress, CircularProgressProps, Typography, Stack, Box } from '@mui/material';
+import { CircularProgress, Typography, Box } from '@mui/material';
 import { Stat } from 'interfaces'
 
 interface Props {
   stat: Stat,
+  color: string,
 }
 
-const Stat = ({ stat: status }: Props): JSX.Element => {
+const Stat = ({ stat: status, color }: Props): JSX.Element => {
   return (
     <Box position="relative">
       <CircularProgress
         thickness={7} 
         size='15vh'
         variant="determinate"
-        value={status.base_stat} />
+        value={status.base_stat}
+        style={{'color': color}}
+      />
       <Box
         position="relative"
         sx={{

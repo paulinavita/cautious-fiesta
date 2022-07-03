@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
+import getStatsColor from '@utils/getStatsColor'
 import { Stat } from 'interfaces'
 import StatComp from '@components/Detail/Stat'
 
@@ -8,11 +9,12 @@ interface Props {
 }
 
 const StatList = ({ stats }: Props): JSX.Element => {
+  
   return (
     <Stack position="relative" spacing={3} direction="row">
       {
         stats?.map((_stat, index) => (
-          <StatComp key={index} stat={_stat}></StatComp>
+          <StatComp color={getStatsColor[index]} key={index} stat={_stat}></StatComp>
           )
         )
       }
