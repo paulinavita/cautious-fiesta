@@ -29,8 +29,8 @@
 * [Goals](#dart-goals)
 * [Installation](#construction_worker-installation)
 * [Getting Started](#runner-getting-started)
-* [Stack](#stack)
-* [Issues and Improvements](#bug-issues)
+* [Stack](#postbox-stack)
+* [Issues and Improvements](#bug-issues-and-improvements)
 
 
 # :rocket: Features
