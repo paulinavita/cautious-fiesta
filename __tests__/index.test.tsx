@@ -1,10 +1,8 @@
-import React from 'react'
 import { cleanup, render } from '@testing-library/react'
 import Index from '../pages/index'
-console.log(Index, 'ini indexx')
 
 jest.mock('next/head', () => () => 'Head')
-jest.mock('@views/Home', () => () => 'PokedexHomepage')
+jest.mock('@components/Home', () => () => 'PokedexHomepage')
 
 console.error = jest.fn()
 

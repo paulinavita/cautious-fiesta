@@ -20,5 +20,5 @@ COPY --from=BUILD_IMAGE /usr/app/yarn.lock ./
 COPY --from=BUILD_IMAGE /usr/app/public ./public
 COPY --from=BUILD_IMAGE /usr/app/.next ./.next
 EXPOSE 3000
-CMD yarn dev
+CMD yarn start
 

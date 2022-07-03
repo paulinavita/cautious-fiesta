@@ -11,7 +11,6 @@ const customConfig = {
   'coverageDirectory': '.coverage',
   moduleNameMapper: {
     '^@components(.*)$': '<rootDir>/components$1',
-    '^@views(.*)$': '<rootDir>/views$1',
     '^@pages(.*)$': '<rootDir>/pages$1',
     '^@hooks(.*)$': '<rootDir>/hooks$1',
     '^@utils(.*)$': '<rootDir>/utils$1',
