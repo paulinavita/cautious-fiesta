@@ -1,13 +1,8 @@
 import * as React from 'react';
 import type { AppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
-import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
-// import ModalProvider from '../context/modalContext';
-// import LocalizationProvider from '../context/i18nContext';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import '../lib/i18n';
-
-// import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
-// import { ReactQueryDevtools } from 'react-query/devtools';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -29,12 +24,8 @@ const App: React.FunctionComponent<PropsPage> = (props) => {
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={getTheme()}>
-        {/* <LocalizationProvider> */}
-          {/* <ModalProvider> */}
-            <CssBaseline />
-            <Component {...pageProps} />
-          {/* </ModalProvider> */}
-        {/* </LocalizationProvider> */}
+          <CssBaseline />
+          <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
   )

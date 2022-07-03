@@ -33,6 +33,6 @@ describe('Components: Banner', () => {
   it('Render: default render', () => {
     const { wrapper } = setup()
     // console.log(wrapper.debug())
-    // expect(wrapper).toBeDefined()
+    expect(wrapper).toBeDefined()
   })
 })

@@ -21,7 +21,6 @@ const ModalProvider = ({ children }: ModalProviderProps) => {
 
   const handlClose = useCallback(() => {
     setIsOpen(false);
-    // document.body.style.overflow = 'unset';
   }, []);
 
   const handleOpen = useCallback((payload: CardModalProps) => {

@@ -4,12 +4,8 @@ import { Container, Loader } from '@components/Common';
 import Pagination from '@mui/material/Pagination';
 import { Grid, Box, Typography } from '@mui/material'
 import axios from 'axios'
-// import { dehydrate, QueryClient } from 'react-query';
-// import { getPokemons, useFetchPokemons, getPokemon } from '../../api/index';
 import useFetch from '@hooks/useFetch';
 import { CardModalProps } from '@components/Home/Card'
-import { Pokemon, Type, PokemonInfo } from 'interfaces';
-
 
 export type Pokemons = {
   count: number;
@@ -62,7 +58,7 @@ const PokedexList: FC = () => {
 
   return (
     <Container maxWidth="false" bgcolor="primary.background">
-      <Container>
+      <Container id="pokedex-list">
         <Box px={{xs:4, sm:8, md:12}}>
         <Box sx={{ pb: 7, pt: 3 }} display={'flex'} flexDirection={'column'} textAlign={'center'}>
           <Typography variant="h4" sx={{ pb: 2, 'fontWeight': 700 }}>PokeDex</Typography>
@@ -115,17 +111,5 @@ const PokedexList: FC = () => {
     </Container>
   )
 }
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   const queryClient = new QueryClient()
-//   await queryClient.prefetchQuery('getPokemons', () => getPokemons())
-
-//   console.log(queryClient)
-//   return {
-//     props: {
-//       dehydratedState: dehydrate(queryClient),
-//     },
-//   }
-// }
 
 export default PokedexList
