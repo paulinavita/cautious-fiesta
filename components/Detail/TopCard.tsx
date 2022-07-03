@@ -39,7 +39,7 @@ const TopCard = ({ pokemon }: Props): JSX.Element => {
                 {
                   pokemon?.abilities?.map((_abl, i) => (
                     <Typography key={i}>
-                      {`${i+1}. ${getCapFirstLetter(_abl.ability.name)}`}
+                      {`${i+1}. ${getCapFirstLetter(_abl.ability?.name || '')}`}
                     </Typography>
                   ))
                 }

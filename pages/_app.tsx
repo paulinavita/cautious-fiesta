@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import type { AppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
@@ -20,6 +19,7 @@ import getTheme from 'themes';
 import '../styles/globals.css';
 interface PropsPage extends AppProps {
   emotionCache?: EmotionCache;
+  Component: React.ReactElement;
 }
 
 const clientSideEmotionCache = createEmotionCache();

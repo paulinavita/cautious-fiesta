@@ -20,6 +20,10 @@ const PokeCellCard = ({ pokemon }: Props): JSX.Element => {
 		return number
 	}
 
+  function getPathName () {
+    return data?.name || ''
+  }
+
   const getNumId = () => {
     return data?.id && (
       <Typography variant="h6" sx={{fontWeight: 500}}>
@@ -33,7 +37,8 @@ const PokeCellCard = ({ pokemon }: Props): JSX.Element => {
       <Image
         width={100} height={100} 
         alt={"poke-img"} 
-        src={data?.sprites?.front_default || 'https://media.giphy.com/media/PJOkkAIek6s2LJmi8c/giphy.gif'}
+        src={process.env.PUBLIC_URL , `${data?.sprites?.front_default}`}
+        // src={data?.sprites?.front_default || 'https://media.giphy.com/media/PJOkkAIek6s2LJmi8c/giphy.gif'}
       />
     )
   }
@@ -62,17 +67,17 @@ const PokeCellCard = ({ pokemon }: Props): JSX.Element => {
       }
     </Box>)
   }
-    
 
   useEffect(() => {}, [data])
   return (
-    
-   <React.Fragment>
-     <TableCell>{getImage()}</TableCell>
-     <TableCell align={'left'}>{getNumId()}</TableCell>
-     <TableCell>{getName()}</TableCell>
-     <TableCell>{getTypeChips()}</TableCell>
-   </React.Fragment>
+    <Link href={`/name/${getPathName()}`}>
+      <a>
+        <TableCell>{getImage()}</TableCell>
+        <TableCell align={'left'}>{getNumId()}</TableCell>
+        <TableCell>{getName()}</TableCell>
+        <TableCell>{getTypeChips()}</TableCell>
+      </a>
+    </Link>
   )
 }
 

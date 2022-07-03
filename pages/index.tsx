@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
-import { PokedexHomepage } from '@views/Home';
+import { PokedexHomepage } from '@components/Home';
 
 const IndexPage = (): JSX.Element => {
   return (

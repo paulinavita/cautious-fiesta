@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import Link from 'next/link'
 import LanguageSwitcher from './LanguageSwitcher';
@@ -40,7 +39,7 @@ const NavBar = ({
           >
             <Image alt ="logo-navbar" src="https://i.ibb.co/whjWPh6/navbar-left-logo.png" width={'110%'} height={'40%'}/>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+          <Box sx={{ display: { md: 'flex' } }} alignItems={'center'}>
             {pages.map((item, i) => (
               <Box
                 key={i}
