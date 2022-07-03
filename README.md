@@ -18,7 +18,7 @@
 </p>
 <hr />
 <p align="center">
-   <a href="https://reymon.paulndavita.site/">Live version on docker container (GCP)</a><br/>
+   <a href="https://reymon.paulndavita.site/">Live version on docker container on gcp</a><br/>
    <span>Temporarily; path to be shut on 10th July 2022</span><br>
     <i>Knows issues listed on respective section</i>
 </p>
