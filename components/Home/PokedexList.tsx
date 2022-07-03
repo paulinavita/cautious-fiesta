@@ -3,7 +3,6 @@ import { Card } from '@components/Home';
 import { Container, Loader } from '@components/Common';
 import Pagination from '@mui/material/Pagination';
 import { Grid, Box, Typography } from '@mui/material'
-import { GetStaticProps } from 'next';
 import axios from 'axios'
 // import { dehydrate, QueryClient } from 'react-query';
 // import { getPokemons, useFetchPokemons, getPokemon } from '../../api/index';
@@ -11,11 +10,6 @@ import useFetch from '@hooks/useFetch';
 import { CardModalProps } from '@components/Home/Card'
 import { Pokemon, Type, PokemonInfo } from 'interfaces';
 
-// interface NewPokemonsList extends Pokemon {
-//   id: number,
-//   image: string,
-//   types: Type[];
-// }
 
 export type Pokemons = {
   count: number;
