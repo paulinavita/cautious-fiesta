@@ -2,9 +2,9 @@
    <img src="https://media.giphy.com/media/PJOkkAIek6s2LJmi8c/giphy.gif" width="200"/>
 </p>
 
-# Pokedex
+# ReyMon
 
-> Explore pokemons with different renders options that a NextJS application provides
+> Explore pokemons with NextJS
 
 [![Author](https://img.shields.io/badge/author-paulinavita-F65555?style=flat-square)](https://github.com/paulinavita)
 [![Languages](https://img.shields.io/github/languages/count/paulinavita/cautious-fiesta?color=%23F65555&style=flat-square)](#)
