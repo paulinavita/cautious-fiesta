@@ -31,10 +31,10 @@ export const getTypeColor = (type: string) => {
     psychic: pink[300],
     bug: green[300],
     rock: grey[500],
-    ghost: grey[200],
+    ghost: blueGrey[400],
     dark: grey[400],
     dragon: blue[400],
-    steel: grey[300],
+    steel: grey[700],
     fairy: pink[500],
   }
 
