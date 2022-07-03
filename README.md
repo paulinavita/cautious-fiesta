@@ -1,5 +1,5 @@
 <p align="left">
-   <img src=".github/logo.png" width="200"/>
+   <img src="https://media.giphy.com/media/PJOkkAIek6s2LJmi8c/giphy.gif" width="200"/>
 </p>
 
 # Pokedex
