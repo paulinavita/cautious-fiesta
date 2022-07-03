@@ -37,8 +37,7 @@ const PokeCellCard = ({ pokemon }: Props): JSX.Element => {
       <Image
         width={100} height={100} 
         alt={"poke-img"} 
-        src={process.env.PUBLIC_URL , `${data?.sprites?.front_default}`}
-        // src={data?.sprites?.front_default || 'https://media.giphy.com/media/PJOkkAIek6s2LJmi8c/giphy.gif'}
+        src={data?.sprites?.front_default || 'https://media.giphy.com/media/PJOkkAIek6s2LJmi8c/giphy.gif'}
       />
     )
   }
@@ -72,10 +71,10 @@ const PokeCellCard = ({ pokemon }: Props): JSX.Element => {
   return (
     <Link href={`/name/${getPathName()}`}>
       <a>
-        <TableCell>{getImage()}</TableCell>
-        <TableCell align={'left'}>{getNumId()}</TableCell>
-        <TableCell>{getName()}</TableCell>
-        <TableCell>{getTypeChips()}</TableCell>
+        <TableCell sx={{verticalAlign: 'middle'}}>{getImage()}</TableCell>
+        <TableCell sx={{verticalAlign: 'middle'}} align={'left'}>{getNumId()}</TableCell>
+        <TableCell sx={{verticalAlign: 'middle'}}>{getName()}</TableCell>
+        <TableCell sx={{verticalAlign: 'middle'}}>{getTypeChips()}</TableCell>
       </a>
     </Link>
   )
