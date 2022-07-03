@@ -22,23 +22,7 @@ const Layout = ({
   bgcolor = 'transparent',
 }: Props): JSX.Element => {
 
-  // TODO: Sidebar update
-  // const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-  //   defaultMatches: true,
-  // });
-
   const theme = useTheme();
-  const [openSidebar, setOpenSidebar] = useState(false);
-
-  const handleSidebarOpen = (): void => {
-    setOpenSidebar(true);
-  };
-
-  const handleSidebarClose = (): void => {
-    setOpenSidebar(false);
-  };
-
-  // const open = isMd ? false : openSidebar;
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -46,11 +30,10 @@ const Layout = ({
   });
 
   return (
-    <Box>
+    <Box pb={4}>
       <Box
         bgcolor={bgcolor}
         position={'relative'}
-        // zIndex={theme.zIndex.appBar}
       ></Box>
       <AppBar
         position={'sticky'}
@@ -62,18 +45,12 @@ const Layout = ({
       >
         <Container paddingY={1}>
           <NavBar
-            onSidebarOpen={handleSidebarOpen}
+            onSidebarOpen={() => {}}
             pages={pages}
             colorInvert={trigger ? false : colorInvert}
           />
         </Container>
       </AppBar>
-      {/* <Sidebar
-        onClose={handleSidebarClose}
-        open={open}
-        variant="temporary"
-        pages={pages}
-      /> */}
       <main>
         {children}
       </main>
