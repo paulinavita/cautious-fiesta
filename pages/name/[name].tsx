@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import React, { FC, useState, useEffect } from 'react';
-import { Layout } from '@components/Common';
+import React, { FC, useEffect } from 'react';
+import { Layout, Loader } from '@components/Common';
 import ImgSprites from '@components/Detail/ImgSprites';
 import StatList from '@components/Detail/StatList';
 import { Box, Typography, Container } from '@mui/material'
@@ -15,14 +15,14 @@ export type EvoChain = {
 
 const PokemonDetail: FC = () => {
   const { query, isReady } = useRouter()
-  const url  = `/pokemon/${query.name || ''}`
+  const url  = `/pokemon/${query.name}`
   const { data, loading, error } = useFetch<PokemonInfo>(url)    
 
   useEffect(() => {
     if (!isReady) return
-  }, [isReady])
+  }, [isReady, data, query.name])
 
-  if (!data || error) {
+  if (!data && error) {
     return (
       <Box>
         <Typography>Error while searching for pokemon</Typography>
@@ -30,34 +30,38 @@ const PokemonDetail: FC = () => {
     )
   }
 
-  if (loading) {
+  if (loading || !data ) {
     return (
-      <Box>
-        <Typography>Page is Loading..</Typography>
-      </Box>
+      <Loader />
     )
   }
 
   return (
     <React.Fragment>
       <Layout>
-        <Container fixed>
-            <Box display={'flex'} flexDirection={'column'} alignContent={'center'} justifyContent={'center'}>
-              {/* Main */}
-              <TopCard pokemon={data} />
+        <Container maxWidth="md" sx={{ pt: 5 }}>
+          <Box display={'flex'} flexDirection={'column'} alignItems={'flex-start'} justifyContent={'center'}>
+            {/* Main */}
+            <TopCard pokemon={data} />
 
-              {/* Sprites */}
-              <Typography>Other Images</Typography>
+            {/* Sprites */}
+            <Box>
+              <Typography variant={'h6'} fontWeight={700}>Other Images :</Typography>
               <ImgSprites sprites={data.sprites}/>
+            </Box>
 
-              {/* Stats */}
-              <Typography>Stats</Typography>
+            {/* Stats */}
+            <Box>
+              <Typography variant={'h6'} fontWeight={700}>Stats :</Typography>
               <StatList stats={data.stats}/>
-    
-              {/* Evolutions */}
-              <Typography>Evolution:</Typography>
+            </Box>
+  
+            {/* Evolutions */}
+            <Box pt={4}>
+              <Typography variant={'h6'} fontWeight={700}>Evolution :</Typography>
               <EvolutionList name={String(query.name) || ''}/>
             </Box>
+          </Box>
         </Container>
       </Layout>
     </React.Fragment>
