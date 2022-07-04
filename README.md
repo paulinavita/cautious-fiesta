@@ -18,8 +18,8 @@
 </p>
 <hr />
 <p align="center">
-   <a href="https://reymon.paulndavita.site/">Live version on docker container on gcp</a><br/>
-   <span>Temporarily; path to be shut on 10th July 2022</span><br>
+   <a href="http://35.187.156.80:3000/">With docker container on gcp</a><br/>
+   <span>Temporarily only</span><br>
     <i>Knows issues listed on respective section</i>
 </p>
 
